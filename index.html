@@ -16,9 +16,9 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-mobile-warning">
+      <!-- <div id="unity-mobile-warning">
         WebGL builds are not supported on mobile devices.
-      </div>
+      </div> -->
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
@@ -27,11 +27,11 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/HP_Z8_Fury WEB.loader.js";
+      var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/HP_Z8_Fury WEB.data",
-        frameworkUrl: buildUrl + "/HP_Z8_Fury WEB.framework.js",
-        codeUrl: buildUrl + "/HP_Z8_Fury WEB.wasm",
+        dataUrl: buildUrl + "/Build.data",
+        frameworkUrl: buildUrl + "/Build.framework.js",
+        codeUrl: buildUrl + "/Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Phibonacci",
         productName: "HP Z8 Fury",
@@ -43,7 +43,7 @@
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var mobileWarning = document.querySelector("#unity-mobile-warning");
+      //var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -57,9 +57,9 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        mobileWarning.style.display = "block";
+        //mobileWarning.style.display = "block";
         setTimeout(() => {
-          mobileWarning.style.display = "none";
+          //mobileWarning.style.display = "none";
         }, 5000);
       } else {
         canvas.style.width = "960px";
